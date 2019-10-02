@@ -1,0 +1,116 @@
+/*------------------------------------------------------------------
+[Load]
+-------------------------------------------------------------------*/
+._load{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 10000;
+    background-color: #161616;
+}
+
+._load-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    border-top: 2px solid #fff;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 1.1s linear infinite;
+    animation: spin 1.1s linear infinite;
+}
+  
+@-webkit-keyframes spin {
+    0% { -webkit-transform: translate(-50%,-50%) rotate(0deg); }
+    100% { -webkit-transform: translate(-50%,-50%) rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%,-50%) rotate(0deg); }
+    100% { transform: translate(-50%,-50%) rotate(360deg); }
+}
+
+/*------------------------------------------------------------------
+[Perpectscroll]
+-------------------------------------------------------------------*/
+._body-sync {
+    height: 100vh;
+    position: relative;
+    overflow: auto;
+}
+
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y{
+    background-color: rgba(0,0,0,0.3);
+}
+
+.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y{
+    background-color: rgba(0,0,0,0.5);
+}
+
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x{
+    background-color: rgba(0,0,0,0.3);
+}
+
+.ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x{
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+._scroll{
+    position: relative;
+    overflow: auto;
+}
+
+/*------------------------------------------------------------------
+[Lazy Load]
+-------------------------------------------------------------------*/
+._lazy {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+._lazy:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+  
+._lazy {
+  background-color: #eee;
+}
+
+._lazy:before{
+    /* background-image: url('../img/loader/comet.gif'); */
+    /* background-image: url('../img/loader/dna.gif'); */
+    /* background-image: url('../img/loader/heart.gif'); */
+    /* background-image: url('../img/loader/infinite.gif'); */
+    /* background-image: url('../img/loader/parallax.gif'); */
+    /* background-image: url('../img/loader/windows10.gif'); */
+    /* background-image: url('../img/loader/yinyang.gif'); */
+}
+
+._lazy-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
